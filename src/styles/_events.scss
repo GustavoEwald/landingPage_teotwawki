@@ -1,0 +1,71 @@
+.event--description{
+    background-image: linear-gradient(black, rgb(0,0,10));
+}
+.event--place{
+    background-image: linear-gradient(rgb(0,0,10), rgb(0,5,20));
+}
+.event--food{
+    background-image: linear-gradient(rgb(0,5,20), rgb(0,10,30));
+}
+.event--music{
+    background-image: linear-gradient(rgb(0,10,30), rgb(0,15,40));
+}
+.event--firework{
+    background-image: linear-gradient(rgb(0,15,40), rgb(0,20,50));
+}
+.event--caos{
+    background-image: linear-gradient(rgb(0,20,50), rgb(0,25,60));
+}
+.event--devastation{
+    background-image: linear-gradient(rgb(0,25,60), rgb(0,30,70));
+}
+.crossed{
+    text-decoration: line-through;
+}
+
+.event__container{
+    display: flex;
+    padding: 40px;
+    height: 50vh;
+    gap: 40px;
+    align-items: flex-start;
+    
+    &__text{
+        color: white;
+        &__description{
+            margin-top: 10px;
+            
+            @media (max-width:640px){
+                text-justify:distribute;
+                text-align: justify;
+            }
+        }
+    }
+
+    &__image{
+        max-width: 300px;
+        width: 100%;
+        border: 2px solid white;
+
+        @media (max-width:640px){
+            max-width:none;
+            width: 100%;
+        }
+
+        @media (max-width:1024px){
+            min-width: 250px;
+        }
+    }
+
+    @media (max-width: 640px){
+        flex-direction: column;
+        padding: 24px 24px;
+        gap: 20px;
+        height: auto;
+    }
+}
+.event__container--reverse{
+    @media (max-width: 640px){
+        flex-direction: column-reverse;
+    }
+}
